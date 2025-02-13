@@ -1,35 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      div {width: 120px; margin: auto; display: flex; justify-content: space-between;}
-    </style>
-    <title>Just For You &#129505</title>
-  </head>
-  <body style="text-align: center">
-    <img src="Gambar" alt="DekaTutorial" style="height: 280px" />
-    <h1>Aya</h1>
-    <h2>Happy valentine sayang🤍</h2>
-    <h3>Mau temenin aku selama nya gaa?? </h3>
-    <div>
-      <button onclick="mau()">MAU</button>
-      <button onmouseover="gak(this)">GAK</button>
-    </div>
-    <script>
-      function mau() {
-        alert("Makasih mau nemenin aku :)");
-        alert("Kirim jawabannya ke WA aku ya");
 
-        location.assign("https://wa.me/?text=Aku%20mau%20jadi%20pacar%20kamu%20><");
-      }
-      function gak(ini) {
-        ini.style.position = "absolute";
-        ini.style.left = `${Math.floor(Math.random() * 90)}%`;
-        ini.style.top = `${Math.floor(Math.random() * 90)}%`;
-      }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="./assets/get_image.php?file=popup-style-css" />
+    <title>Special For You</title>
+</head>
+
+<body>
+    <main>
+        <div class="container" style="background-image: url('https://dari-deka.github.io/assets/popup-bg.jpg')">
+            <p>Happy Valentine sayang рџ¤Ќ</p>
+            <img src="https://dari-deka.github.io/assets/Stiker%203.gif"
+                class="stkr" />
+            <button class="btn btn-start">Klik Disini</button>
+        </div>
+
+        
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+<style>
+.container-ads {
+    background: rgb(255, 227, 255);
+    /* background: #fff; */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 20px; */
+}
+
+.header {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header h3 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    /* background: blue; */
+}
+
+.icon i {
+    color: white;
+    height: 7px;
+    line-height: 7px;
+    font-size: 2rem;
+    animation: anm-scroll-i 2s ease infinite;
+}
+
+.icon i:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.icon i:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes anm-scroll-i {
+
+    0%,
+    60%,
+    100% {
+        opacity: 1;
+    }
+
+    70%,
+    80% {
+        opacity: 0;
+    }
+}
+
+.video {
+    width: 100%;
+    height: 100%
+        /* padding: 20px 0; */
+}
+
+.order {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.video h2,
+.order h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    color: #3c3c3c;
+}
+
+.video h2 {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.order p {
+    font-weight: 600;
+    color: #3c3c3c;
+    background: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    letter-spacing: 0;
+    margin-top: 12px;
+}
+
+.order p::after {
+    display: none !important;
+}
+
+/* .video .video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: auto;
+    width: 100%;
+    height: 40vh;
+    overflow: auto;
+    margin-top: 12px;
+    scroll-snap-type: y mandatory;
+    padding: 0 20px;
+} */
+
+.video .video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    padding: 0 20px;
+    margin-top: 20px;
+    gap: 12px;
+    max-height: calc(100% - 100px);
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+/* .video .video-container .video-item {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    width: 45vw;
+    max-width: 250px;
+    padding: 8px;
+    background: #f4eafe;
+    border-radius: 0.5em;
+    scroll-snap-align: start;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+} */
+
+.video .video-container .video-item {
+    text-decoration: none;
+    padding: 12px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+/* .video .video-container img {
+    width: 40vw;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 5px;
+} */
+
+.video .video-container img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.video-title {
+    color: #3c3c3c;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.order .btn {
+
+    font-size: 1.1rem;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #6e86f8;
+    border: 3px solid white;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 20px #19224e7f;
+    margin-top: 20px;
+
+
+    font-size: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 12px;
+    width: 100%;
+}
+
+.order .btn span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+    async function start() {
+        
+        await swalo.fire({
+            title: `maaf ga selalu di samping aya yaa`,
+            imageUrl: `https://dari-deka.github.io/assets/Stiker%2010.gif`
+        });
+
+        
+        await swalo.fire({
+            title: `maaf juga kalau msh banyak kurang nya`,
+            imageUrl: `https://dari-deka.github.io/assets/Stiker%2010.gif`
+        });
+
+        
+        await swalo.fire({
+            title: `Always be my valentine yaa sayang`,
+            imageUrl: `https://dari-deka.github.io/assets/Stiker%2020.gif`
+        });
+
+        
+        await swalo.fire({
+            title: `I LOVE YOU `,
+            imageUrl: `https://dari-deka.github.io/assets/Stiker%2012.gif`
+        });
+
+        
+        await swalo.fire({
+            title: `kalau ketemu cium yah :3`,
+            imageUrl: `https://dari-deka.github.io/assets/Stiker%2018.gif`
+        });
+
+            }
+
+
+    var swalo = Swal.mixin({
+        allowOutsideClick: false,
+        confirmButtonText: "Next"
+    });
+
+    document.querySelector(".btn-start").onclick = start;
+
+    let isScroll = 0;
+    let mainC = document.querySelector("main");
+    console.log(mainC);
+
+    mainC.addEventListener("scroll", function() {
+        console.log(mainC.scrollTop);
+        if (mainC.scrollTop > 70) {
+            if (!isScroll) {
+                console.log(mainC.scrollTop);
+                mainC.scrollTop = mainC.scrollHeight;
+                isScroll = 1;
+            }
+        } else {
+            if (isScroll) {
+                isScroll = 0;
+            }
+        }
+    });
     </script>
-  </body>
+</body>
+
 </html>
